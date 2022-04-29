@@ -13,7 +13,8 @@ public class Pokemon {
     private ArrayList<PokemonMove> moveList;
 
     public int getId() {
-        return id;
+        String[] urlID = url.split("/");
+        return Integer.parseInt(urlID[urlID.length-1]);
     }
 
     public void setId(int id) {
