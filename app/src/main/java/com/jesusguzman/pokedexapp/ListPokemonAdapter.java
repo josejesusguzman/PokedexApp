@@ -62,16 +62,16 @@ public class ListPokemonAdapter extends RecyclerView.Adapter<ListPokemonAdapter.
                 Intent pokeIntent = new Intent(context.getApplicationContext(), PokemonActivity.class);
 
                 view.buildDrawingCache();
-                Bitmap image = pokeImage.getDrawingCache();
+                //Bitmap image = pokeImage.getDrawingCache();
 
                 Bundle extras = new Bundle();
-                Pokemon p = dataset.get(imageId - 1);
+                Pokemon p = dataset.get(imageId);
                 String name = p.getName();
                 String type = p.getType();
                 Integer height = p.getHeight();
                 Integer weight = p.getWeight();
                 extras.putString("id", String.valueOf(imageId));
-                extras.putParcelable("imagebitmap", image);
+                //extras.putParcelable("imagebitmap", image);
                 extras.putString("name", name);
                 extras.putString("type", type);
                 extras.putString("height", "Alto: " + height * 10 + " cm");

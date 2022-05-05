@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     private void getData() {
         PokeApiService service = retrofit.create(PokeApiService.class);
-        Call<PokemonRequest> pokemonRequestCall = service.getPokemonList(151);
+        Call<PokemonRequest> pokemonRequestCall = service.getPokemonList(300);
 
         pokemonRequestCall.enqueue(new Callback<PokemonRequest>() {
             @Override

@@ -2,8 +2,99 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#3c5aa6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PokemonActivity">
 
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imgView"
+        android:layout_marginHorizontal="12dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#ffee00"
+        android:shadowColor="@color/black"
+        android:shadowDy="1.3"
+        android:shadowDx="1.5"
+        android:shadowRadius="1.6"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#3c5aa6"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/typeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_first_fragment"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#ffee00"
+                android:shadowColor="@color/black"
+                android:shadowDy="1.3"
+                android:shadowDx="1.5"
+                android:shadowRadius="1.6"/>
+
+            <TextView
+                android:id="@+id/heightView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_first_fragment"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#ffee00"
+                android:shadowColor="@color/black"
+                android:shadowDy="1.3"
+                android:shadowDx="1.5"
+                android:shadowRadius="1.6"/>
+
+            <TextView
+                android:id="@+id/weightView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_first_fragment"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#ffee00"
+                android:shadowColor="@color/black"
+                android:shadowDy="1.3"
+                android:shadowDx="1.5"
+                android:shadowRadius="1.6"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatinActionButton"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:backgroundTint="#ffee00"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/pokeball"/>
+
+
+        </LinearLayout>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
